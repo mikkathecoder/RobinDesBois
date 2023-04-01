@@ -14,14 +14,14 @@ function Header() {
             </div>
         </div>
         <div className='header_menuItems'>
-            <a href='#'>Stocks Gratuit</a>
-            <a href='#'>Portfolio</a>
-            <a href='#'>Cash</a>
-            <a href='#'>Messages</a>
-            <a href='#'>Compte</a>
+            <a href='#/'>Stocks Gratuit</a>
+            <a href='#/'>Portfolio</a>
+            <a href='#/'>Cash</a>
+            <a href='#/'>Messages</a>
+            <a href='#/'>Compte</a>
         </div>
     </div>
   )
 }
 
-export default Header
+export default Header;
