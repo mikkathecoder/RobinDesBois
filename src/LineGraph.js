@@ -1,72 +1,108 @@
-import React from 'react';
+import React, { useEffect, useState} from 'react';
 import { Line } from 'react-chartjs-2';
-import { Chart } from 'chart.js';
-import { LineController, PointElement, LineElement, LinearScale, CategoryScale } from 'chart.js';
-
-// Register required controllers, elements, and scales
-Chart.register(LineController, PointElement, LineElement, LinearScale, CategoryScale);
+import { Chart } from 'chart.js/auto';
+import 'chartjs-adapter-date-fns';
 
 function LineGraph() {
   
-  const labels = Array.from({ length: 3 }, (_, i) => i);
-
-  const data = [
-    {
-      x: 0,
-      y: 0,
-    },
-    {
-      x: 1,
-      y: 5,
-    },
-    {
-      x: 2,
-      y: 4
-    },
-    {
-      x: 3,
-      y: 7
+  const [graphData, setGraphData] = useState([]);
+  const labels = Array.from({ length: 366 }, (_, i) => i);
+  const generateDataPoints = (length) => {
+    let data = [
+      { x: new Date(2023, 0, 1), y: 0 },
+      { x: new Date(2023, 0, 2), y: 5 },
+      { x: new Date(2023, 0, 3), y: 4 },
+      { x: new Date(2023, 0, 4), y: 7 },
+    ];
+  
+    for (let i = 4; i < length; i++) {
+      let x = new Date(2023, 0, i + 1);
+      let y = data[i - 1].y + Math.round(Math.random() * 10 - 5);
+      data.push({ x: x, y: y });
     }
-  ];
+  
+    return data;
+  };
+  
 
-  const options = {
+const data = generateDataPoints(366);
+
+
+const createMockData = () => {
+    let data = [];
+    let value = 50;
+    for(var i = 0; i < 366; i++){
+        let date = new Date();
+        date.setHours(0,0,0,0,);
+        date.setDate(i);
+        value += Math.round((Math.random() < 0.5 ? 1 : 0) * Math.random() * 10);
+        data.push({x: date, y: value});
+    }
+    setGraphData(data);
+}
+
+useEffect(()=>{
+    createMockData();
+}, [])
+const options = {
     plugins: {
-        tooltip: {
-          enabled: true,
-        },
-      },
-      interaction: {
+      tooltip: {
+        enabled: true,
         mode: 'nearest',
         intersect: false,
-        axis: 'x',
+        position: 'nearest',
+        callbacks: {
+          title: (tooltipItems) => {
+            const date = tooltipItems[0].raw.x;
+            return `Date: ${date.toLocaleDateString()}`;
+          },
+          label: (tooltipItem) => {
+            const value = tooltipItem.raw.y;
+            return `Value: ${value}`;
+          },
+        },
       },
+    },
     scales: {
       x: {
-        type: 'linear', 
+        type: 'time',
+        time: {
+          parser: 'MM/dd/yyyy',
+          tooltipFormat: 'MM/dd/yyyy',
+        },
         display: false,
         title: {
           display: true,
-          text: 'X Axis Label',
+          text: 'Date',
         },
       },
       y: {
         display: false,
         title: {
           display: true,
-          text: 'Y Axis Label',
+          text: 'Value',
         },
       },
     },
   };
+  
+  
+  
+  
+  
+  
+
+  
+  
 
   return (
     <div className="linegraph">
       <Line 
         data={{
-            labels: labels,
+           
             datasets: [
               {
-                data: data,
+                data: graphData,
                 backgroundColor: "rgba(75,192,192,0.4)",
                 borderColor: "rgba(255,0,0,1)",
                 borderWidth: 2,
