@@ -3,7 +3,11 @@ import "./Newsfeed.css"
 
 function Newsfeed() {
   return (
-    <div>Newsfeed</div>
+    <div className='newsfeed'>
+        <div className="newsfeed__container">
+            
+        </div>
+    </div>
   )
 }
 
