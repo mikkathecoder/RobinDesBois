@@ -5,7 +5,7 @@
 }
 
 .newsfeed__portfolio {
-    text-align: left
+    text-align: center
 }
 
 .newsfeed__portfolio h1 {
@@ -13,5 +13,5 @@
 }
 
 .newsfeed__portfolio p {
-    margin-top: 0;
+    margin-top: 5;
 }
