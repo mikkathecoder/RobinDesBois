@@ -1,4 +1,4 @@
 .stats {
-    background-color: green;
+    border: 1px solid green;
     flex: 0.3;
 }
