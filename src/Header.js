@@ -13,7 +13,7 @@ function Header() {
                 <input placeholder='Recherche' type="text"/>
             </div>
         </div>
-        <div className='header_menuItems'>
+        <div className='header__menuItems'>
             <a href='#/'>Stocks Gratuit</a>
             <a href='#/'>Portfolio</a>
             <a href='#/'>Cash</a>
