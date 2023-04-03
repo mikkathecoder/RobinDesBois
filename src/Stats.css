@@ -1,4 +1,24 @@
 .stats {
-    border: 1px solid green;
+    display: flex;
     flex: 0.3;
+    padding: 0px 30px 30px 30px;
+    color: white;
+}
+
+.stats__container{
+    flex-direction: column;
+    flex: 1;
+    background-color: #1E2023;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+
+.stats__header{
+    display: flex;
+    font-size: 16px;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid grey;
+    padding: 20px 20px 10px 20px;
+    font-weight: 500;
 }
