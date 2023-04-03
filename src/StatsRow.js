@@ -1,12 +1,13 @@
 import React from 'react'
 import "./StatsRow.css"
 
-function StatsRow() {
+
+function StatsRow(props) {
   return (
     <div className="row">
       <div className="row__intro">
-        <h1>AAPL</h1>
-        <p>200 shares</p>
+        <h1>{props.name}</h1>
+        <p>{props.shares && props.shares + " shares"}</p>
       </div>
       <div className="row__chart">
         

@@ -44,17 +44,20 @@ function Stats() {
             <div className='stats__header'>
               <p>Stocks</p>
             </div>
+            <div className='stats__header'>
+              <p>Lists</p>
+            </div>
             <div className='stats__content'>
               <div className='stats__rows'>
                 {stockData.map((stock) => (
                   <StatsRow
-                  
+                      key={stock.name}
+                      name={stock.name}
+                      openPrice={stock.o}
+                      price={stock.c}
                   />
                   ))}
               </div>
-            </div>
-            <div className='stats__header'>
-              <p>Lists</p>
             </div>
         </div>
     </div>
