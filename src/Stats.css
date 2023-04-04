@@ -27,3 +27,14 @@
     padding: 20px 20px 10px 20px;
     font-weight: 500;
 }
+
+.stats__header2{
+    display: flex;
+    font-size: 16px;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid grey;
+    padding: 20px 20px 10px 20px;
+    font-weight: 500;
+    border-top: 1px solid grey;
+}
