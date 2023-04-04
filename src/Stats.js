@@ -71,7 +71,7 @@ function Stats() {
     <div className="stats">
       <div className="stats__container">
         <div className="stats__header">
-          <p>My Stocks</p>
+          <p>Mes Stocks</p>
         </div>
         <div className="stats__content">
           <div className="stats__rows">

@@ -6,6 +6,7 @@
 .newsfeed__chartSection {
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 .newsfeed__portfolio {
@@ -22,4 +23,16 @@
 
 .newsfeed__chart {
     width: 100%;
+   
+}
+
+.newsfeed__container {
+    height: 100%;
+}
+
+.newsfeed__buying__section {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid gray;
+    padding: 20px 0px;
 }
