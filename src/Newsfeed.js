@@ -21,6 +21,12 @@ function Newsfeed() {
               <h2>Pouvoir d'Achat</h2>
               <h2>€5,191.001</h2>
             </div>
+            <div className='newsfeed__market__section'>
+              <div className='newsfeed__market__box'>
+                <p>Le marché est ouvert !</p>
+                <h1>Bonjour chers investisseur :D</h1>
+              </div>
+            </div>
         </div>
     </div>
   )
