@@ -32,7 +32,7 @@ function LineGraph() {
         display: false,
       },
       tooltip: {
-        enabled: true,
+        enabled: false,
         mode: 'nearest',
         intersect: false,
         position: 'nearest',
