@@ -44,7 +44,7 @@ function Newsfeed() {
             </div>
             <div className="newsfeed__popularlists__section">
               <div className="newsfeed__popularlists__intro">
-                <h1> En Tendance</h1>
+                <h1> En Tendance dans le monde</h1>
                 <p>Voir plus</p>
               </div>
               <div className="newsfeed_popularlists_badges">

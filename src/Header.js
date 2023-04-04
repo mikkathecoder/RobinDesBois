@@ -9,9 +9,7 @@ function Header() {
             <img src={Logo} alt="Logo" width={25}/>
         </div>
         <div className='header__search'>
-            <div className="header__searchContainer">
-                <input placeholder='Recherche' type="text"/>
-            </div>
+
         </div>
         <div className='header__menuItems'>
             <a href='#/'>Stocks Gratuit</a>

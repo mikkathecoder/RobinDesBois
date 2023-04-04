@@ -77,3 +77,24 @@
     font-weight: bold;
     color: orange;
   }
+
+  .newsfeed_popularlists_badges {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .newsfeed_popularlists_badges .topic__badge {
+    border: 1px solid #31363A;
+    background-color: transparent;
+    color: white;
+    margin-right: 8px;
+    margin-bottom: 8px;
+  }
+
+  .newsfeed_popularlists_badges .topic__badge:hover {
+   cursor: pointer;
+   background-color: grey;
+  }
+
+
+  
