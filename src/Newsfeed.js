@@ -60,14 +60,12 @@ function Newsfeed() {
   
   const [popularTopics, setTopics] = useState([
     "Technology",
-    "Top Movies",
-    "Upcoming Earnings",
+    "Industrie du film",
+    "Futur gain",
     "Crypto",
-    "Cannabis",
-    "Healthcare Supplies",
+    "Santé",
     "Index ETFs",
-    "Technology",
-    "China",
+    "Chine",
     "Pharma",
   ]);
 
